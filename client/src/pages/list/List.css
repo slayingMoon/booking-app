@@ -1,0 +1,93 @@
+.list-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.list-wrapper {
+    width: 100%;
+    max-width: 1024px;
+    display: flex;
+    gap: 20px;
+}
+
+.list-search {
+    flex: 1;
+    background-color: #febb02;
+    padding: 10px;
+    border-radius: 10px;
+    position: sticky;
+    top: 10px;
+}
+
+.ls-title {
+    font-size: 20px;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.ls-item {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.ls-item > label {
+    font-size: 12px;
+}
+
+.ls-item > input {
+    height: 30px;
+    border: none;
+    padding: 5px;
+}
+
+.ls-item > span {
+    height: 30px;
+    padding: 5px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.date {
+    position: absolute;
+    top: 63px;
+}
+
+.ls-options {
+    padding: 10px;
+}
+
+.ls-option-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    color: #555;
+    font-size: 12px;
+}
+
+.ls-option-input {
+    width: 50px;
+}
+
+.list-search > button {
+    padding: 10px;
+    background-color: #0071c2;
+    color: white;
+    border: none;
+    width: 100%;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.list-search > button:hover {
+    background-color: #005c9d;
+}
+
+.list-result {
+    flex: 3;
+}
