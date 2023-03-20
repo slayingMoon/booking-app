@@ -18,7 +18,7 @@
 
 .header-list {
     display: flex;
-    gap: 40px;
+    gap: 10px;
     margin-bottom: 50px;
 }
 
@@ -26,11 +26,17 @@
     display: flex;
     align-items: center;
     gap: 10px;
+    padding: 8px 14px;
 }
 
 .header-list-item.active {
     border: 1px solid white;
-    padding: 10px;
+    border-radius: 20px;
+    background-color: #204c8e;
+}
+
+.header-list-item:hover {
+    cursor: pointer;
     border-radius: 20px;
     background-color: #204c8e;
 }
@@ -89,6 +95,7 @@
 .date {
     position: absolute;
     top: 55px;
+    z-index: 2;
 }
 
 /* Guest options */
@@ -101,6 +108,7 @@
     border-radius: 2px;
     -webkit-box-shadow: 0px 0px 10px -5px rgba(0, 0, 0, 0.4);
     box-shadow: 0px 0px 10px -5px rgba(0, 0, 0, 0.4);
+    z-index: 2;
 }
 
 .option-item {
