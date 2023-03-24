@@ -16,13 +16,13 @@
 }
 
 .logo-link {
+    color: inherit;
     text-decoration: none;
 }
 
 .logo {
     font-weight: 500;
     font-size: 26px;
-    color: white;
 }
 
 .nav-button {
