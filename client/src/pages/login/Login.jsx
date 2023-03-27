@@ -16,7 +16,6 @@ const Login = ({type}) => {
     const navigate = useNavigate();
 
     const handleChange = (e) => {
-        console.log(e.target.id);
         setCredentials(prev => ({
             ...prev,
             [e.target.id]: e.target.value

@@ -17,14 +17,14 @@ export default function Header({type}) {
     const [dates, setDates] = useState([
         {
           startDate: new Date(),
-          endDate: new Date(Date.now() + 86400000),
+          endDate: new Date(),
           key: 'selection'
         }
       ]);
 
       const [optionsOpen, setOptionsOpen] = useState(false);
       const [options, setOptions] = useState({
-        adult: 1,
+        adult: 2,
         children: 0,
         room: 1,
       });
