@@ -12,7 +12,7 @@ export default function List() {
 
     const location = useLocation();
     const [destination, setDestination] = useState(location.state.destination);
-    const [date, setDate] = useState(location.state.date);
+    const [dates, setDates] = useState(location.state.dates);
     const [options, setOptions] = useState(location.state.options);
     const [openDate, setOpenDate] = useState(false);
     const [min, setMin] = useState(undefined);
@@ -22,6 +22,15 @@ export default function List() {
 
     const handleClick = () => {
         reFetch();
+    };
+
+    const handleOption = (name, value) => {
+        setOptions(prev => {
+            return {
+                ...prev, 
+                [name]: value 
+            }
+        });
     };
 
     return (
@@ -39,14 +48,14 @@ export default function List() {
                         <div className="ls-item">
                             <label>Check-in Date</label>
                             <span onClick={() => setOpenDate(!openDate)}>
-                            {`${format(date[0].startDate, "MM/dd/yyyy")} 
-                                to ${format(date[0].endDate, "MM/dd/yyyy")}`}
+                            {`${format(dates[0].startDate, "MM/dd/yyyy")} 
+                                to ${format(dates[0].endDate, "MM/dd/yyyy")}`}
                             </span>
                             {openDate && 
                             <DateRange 
-                                onChange={(item) => setDate([item.selection])}
+                                onChange={(item) => setDates([item.selection])}
                                 minDate={new Date()}
-                                ranges={date}
+                                ranges={dates}
                                 className="date"
                             />}
                         </div>
@@ -74,6 +83,7 @@ export default function List() {
                                         className="ls-option-input" 
                                         min={1}
                                         placeholder={options.adult}
+                                        onChange={e=> handleOption("adult", e.target.value)}
                                     />
                                 </div>
                                 <div className="ls-option-item">
@@ -85,6 +95,7 @@ export default function List() {
                                         className="ls-option-input" 
                                         min={0}
                                         placeholder={options.children}
+                                        onChange={e=> handleOption("children", e.target.value)}
                                     />
                                 </div>
                                 <div className="ls-option-item">
@@ -96,6 +107,7 @@ export default function List() {
                                         className="ls-option-input" 
                                         min={1}
                                         placeholder={options.room}
+                                        onChange={e=> handleOption("room", e.target.value)}
                                     />
                                 </div>
                             </div>
@@ -105,7 +117,7 @@ export default function List() {
                     <div className="list-result">
                         {loading ? "loading..." :
                         <>
-                            {data.map(item => (
+                            {data?.map(item => (
                                 <SearchItem item={item} key={item._id} />
                             ))}
                         </>}

@@ -85,6 +85,13 @@
     outline: none;
 }
 
+.header-search-input:invalid {
+        background-color: ivory;
+    border: none;
+    outline: 2px solid red;
+    border-radius: 5px;
+}
+
 .header-search-text {
     color: lightgray;
     cursor: pointer;
