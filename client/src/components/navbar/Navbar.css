@@ -32,3 +32,9 @@
     cursor: pointer;
     color: #0171c2;
 }
+
+.user-items {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
