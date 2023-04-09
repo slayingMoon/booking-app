@@ -9,11 +9,23 @@
     display: flex;
     flex-direction: column;
     gap: 10px;
+    align-items: center;
+    padding: 30px;
+    width: 100%;
+    max-width: 500px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.25);
+}
+
+.l-header {
+    font-weight: 400;
+    margin-bottom: 30px;
 }
 
 .l-input {
-    height: 30px;
+    height: 50px;
     padding: 10px;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .l-button {
@@ -24,9 +36,25 @@
     font-weight: bold;
     cursor: pointer;
     border-radius: 2px;
+    width: 100%;
+    margin-top: 20px;
 }
 
 .l-button:disabled {
     background-color: #0071c28c;;
     cursor: not-allowed;
+}
+
+.error {
+    padding: 10px;
+    background: #ffefef;
+    border: 1px solid #e7195a;
+    color: #e7195a;
+    margin-top: 10px;
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
 }

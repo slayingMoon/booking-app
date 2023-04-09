@@ -99,7 +99,7 @@ const Reserve = ({setOpen, hotelId}) => {
                         </div>
                     </div>
                 ))}
-                <button onClick={handleClick} className="r-button">Reserve Now!</button>
+                <button onClick={handleClick} className="res-button">Reserve Now!</button>
             </div>
         </div>
     );

@@ -14,6 +14,20 @@ export const register = async (req, res, next) => {
             password: hash,
         });
 
+        const foundByUsername = await User.findOne({username: req.body.username});
+        const foundByEmail = await User.findOne({email: req.body.email});
+        if(foundByUsername) {
+            throw Error('User with this username already exists');
+        }
+
+        if(foundByEmail) {
+            throw Error('User with this email already exists');
+        }
+
+        // if(!newUser.username || !newUser.email || !newUser.password) {
+        //     throw Error('All fields are required');
+        // }
+
         await newUser.save();
         res.status(200).send("User has been created.");
     }catch(err) {

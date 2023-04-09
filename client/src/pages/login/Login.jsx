@@ -39,6 +39,7 @@ const Login = ({type}) => {
             <Navbar />
             <div className="login">
                 <div className="l-container">
+                    <h1 className="l-header">Login</h1>
                     <input 
                         type="text" 
                         placeholder="username" 
@@ -54,7 +55,7 @@ const Login = ({type}) => {
                         className="l-input" 
                     />
                     <button disabled={loading} onClick={handleClick} className="l-button">Login</button>
-                    {error && <span>{error.message}</span>}
+                    {error && <div className="error">{error.message}</div>}
                 </div>
             </div>
         </>

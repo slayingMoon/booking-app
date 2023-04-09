@@ -59,6 +59,12 @@
     justify-content: space-between;
 }
 
+.hotel-img-wrapper.thumb {
+    width: 100%;
+    margin-right: 30%;
+    max-width: 50%;
+}
+
 .hotel-img-wrapper {
     width: 33%;
     cursor: pointer;

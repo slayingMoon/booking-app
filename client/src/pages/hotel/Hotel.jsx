@@ -89,7 +89,7 @@ export default function Hotel() {
                     </span>
                     <div className="hotel-images">
                         {data.photos?.map((photo, i) => (
-                            <div className="hotel-img-wrapper" key={i}>
+                            <div className={i === 0 ? 'hotel-img-wrapper thumb' : 'hotel-img-wrapper'} key={i}>
                                 <img onClick={() => handleOpen(i)} src={photo} alt="" className="hotel-img" />
                             </div>
                         ))}
